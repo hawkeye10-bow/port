@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/LOGO-2.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sandeep Dara's Portfolio</title>
+    <meta name="description" content="Premium Full Stack Developer & ML Engineer crafting next-generation digital experiences">
+    
+    <!-- Gaming Style Fonts - Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800;900&family=Audiowide:wght@400&family=Electrolize:wght@400&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Performance optimizations -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//images.pexels.com">
+    
+    <!-- Meta tags for better SEO -->
+    <meta name="keywords" content="Full Stack Developer, Machine Learning Engineer, React Developer, MERN Stack, Portfolio">
+    <meta name="author" content="Sandeep Dara">
+    <meta property="og:title" content="Sandeep Dara - Elite Developer Portfolio">
+    <meta property="og:description" content="Premium Full Stack Developer & ML Engineer crafting next-generation digital experiences">
+    <meta property="og:type" content="website">
+    
+    <style>
+      /* Gaming-style CSS reset and base styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Gaming typography foundation */
+      body {
+        font-family: 'Rajdhani', 'Exo 2', 'Orbitron', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        font-feature-settings: "liga", "calt", "ss01", "ss02";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.6;
+        letter-spacing: 0.02em;
+        font-weight: 500;
+        
+      }
+      
+      /* Enhanced gaming scrollbar design */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+        border-radius: 6px;
+        border: 1px solid rgba(78, 205, 196, 0.1);
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 50%, #ff6b6b 100%);
+        border-radius: 6px;
+        border: 2px solid #0a0a0a;
+        box-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #26a69a 0%, #2e7d32 50%, #ff5252 100%);
+        box-shadow: 0 0 15px rgba(78, 205, 196, 0.8);
+      }
+      
+      /* Gaming-style loading animation - FIXED FOR MOBILE */
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #1a1a2e 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+        /* Ensure perfect centering on mobile */
+        min-height: 100vh;
+        min-height: 100dvh; /* Dynamic viewport height for mobile */
+        padding: 20px;
+        text-align: center;
+      }
+      
+      .loading-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      
+      .loading-spinner {
+        width: 100px;
+        height: 100px;
+        border: 5px solid rgba(78, 205, 196, 0.2);
+        border-top: 5px solid #4ecdc4;
+        border-right: 5px solid #ff6b6b;
+        border-radius: 50%;
+        animation: gamingSpin 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        margin-bottom: 32px;
+        box-shadow: 0 0 30px rgba(78, 205, 196, 0.5);
+        flex-shrink: 0;
+      }
+      
+      .loading-text {
+        color: #4ecdc4;
+        font-family: 'Orbitron', 'Audiowide', monospace;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        animation: gamingPulse 2s ease-in-out infinite;
+        text-shadow: 0 0 20px rgba(78, 205, 196, 0.8);
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+      }
+      
+      /* Mobile-specific adjustments */
+      @media (max-width: 768px) {
+        .loading-screen {
+          padding: 15px;
+          /* Force height to be exactly viewport height */
+          height: 100vh;
+          height: 100dvh;
+        }
+        
+        .loading-spinner {
+          width: 80px;
+          height: 80px;
+          margin-bottom: 24px;
+        }
+        
+        .loading-text {
+          font-size: 1.2rem;
+          letter-spacing: 0.1em;
+          max-width: 400px;
+        }
+      }
+      
+      /* Small mobile adjustments */
+      @media (max-width: 480px) {
+        .loading-screen {
+          padding: 10px;
+        }
+        
+        .loading-spinner {
+          width: 70px;
+          height: 70px;
+          margin-bottom: 20px;
+        }
+        
+        .loading-text {
+          font-size: 1.1rem;
+          letter-spacing: 0.08em;
+          max-width: 350px;
+        }
+      }
+      
+      /* Very small screens */
+      @media (max-width: 320px) {
+        .loading-text {
+          font-size: 1rem;
+          letter-spacing: 0.05em;
+          max-width: 280px;
+        }
+      }
+      
+      @keyframes gamingSpin {
+        0% { transform: rotate(0deg) scale(1); }
+        50% { transform: rotate(180deg) scale(1.1); }
+        100% { transform: rotate(360deg) scale(1); }
+      }
+      
+      @keyframes gamingPulse {
+        0%, 100% { 
+          opacity: 0.6; 
+          text-shadow: 0 0 20px rgba(78, 205, 196, 0.8);
+        }
+        50% { 
+          opacity: 1; 
+          text-shadow: 0 0 30px rgba(78, 205, 196, 1), 0 0 40px rgba(255, 107, 107, 0.5);
+        }
+      }
+      
+      /* Gaming selection styling */
+      ::selection {
+        background: linear-gradient(45deg, rgba(78, 205, 196, 0.4), rgba(255, 107, 107, 0.4));
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(78, 205, 196, 0.8);
+      }
+      
+      ::-moz-selection {
+        background: linear-gradient(45deg, rgba(78, 205, 196, 0.4), rgba(255, 107, 107, 0.4));
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(78, 205, 196, 0.8);
+      }
+      
+      /* Gaming focus styles for accessibility */
+      *:focus {
+        outline: 3px solid #4ecdc4;
+        outline-offset: 3px;
+        box-shadow: 0 0 15px rgba(78, 205, 196, 0.6);
+      }
+      
+      /* Smooth gaming scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Gaming image optimization */
+      img {
+        max-width: 100%;
+        height: auto;
+        filter: brightness(1.05) contrast(1.05);
+      }
+      
+      /* Gaming text glow effects */
+      .gaming-glow {
+        text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+      }
+      
+      /* Gaming button hover effects */
+      .gaming-button {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .gaming-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s ease;
+      }
+      
+      .gaming-button:hover::before {
+        left: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading" class="loading-screen">
+      <div class="loading-content">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Initializing Portfolio...</div>
+      </div>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Enhanced gaming loading screen
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const loading = document.getElementById('loading');
+          if (loading) {
+            loading.style.opacity = '0';
+            loading.style.visibility = 'hidden';
+            setTimeout(() => loading.remove(), 800);
+          }
+        }, 2000);
+      });
+      
+      // Gaming performance monitoring
+      if ('performance' in window) {
+        window.addEventListener('load', () => {
+          const perfData = performance.getEntriesByType('navigation')[0];
+          // console.log('🎮 Gaming Portfolio Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+          console.log('🎮 Gaming Portfolio Load Time:', performance.now(), 'ms');
+        });
+      }
+
+      const originalTitle = "Sandeep Dara's Portfolio 😊";
+      const hiddenTitle = "come back 😞";
+
+      document.addEventListener("visibilitychange", function() {
+          if (document.hidden) {
+              document.title = hiddenTitle;
+          } else {
+              document.title = originalTitle;
+          }
+      });
+    </script>
+  </body>
+</html>
